@@ -45,7 +45,19 @@ public class Main {
 
 
     private static void createRecord() {
-        notepad.createRecord();
+        notepad.createPerson();
+        var type = InputUtils.askString("Type");
+        switch (type)  {
+            case "person":
+                notepad.createPerson();
+                break;
+            case "book":
+                notepad.createBook();
+                break;
+            default:
+                System.out.println("Unknown type");
+
+        }
 
     }
     private static void showHelp() {

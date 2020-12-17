@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class NotePad {
     private ArrayList<Record> records = new ArrayList<>();
 
-    public void createRecord() {
+    public void createPerson() {
         var rec = new Record();
         rec.setFirstName(InputUtils.askString("First Name"));
         rec.setLastName(InputUtils.askString("Last Name"));
@@ -23,5 +23,13 @@ public class NotePad {
 
     public void showListRecords() {
 
+    }
+
+    public void createBook() {
+        var book = new Book();
+        book.setAuthor(InputUtils.askString("Author"));
+        book.setTitle(InputUtils.askString("Title"));
+        book.setIsbn(InputUtils.askString("Isbn"));
+        records.add(book);
     }
 }
