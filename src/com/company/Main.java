@@ -14,6 +14,9 @@ public class Main {
                 case "create":
                     createRecord();
                     break;
+                case "find":
+                    showListRecords();
+                    break;
                 case "help":
                     showHelp();
                     break;
@@ -27,6 +30,11 @@ public class Main {
             }
         }
         System.out.println("Good bye!");
+    }
+
+    private static void showListRecords() {
+        notepad.showListRecords();
+
     }
 
     private static void listRecords() {

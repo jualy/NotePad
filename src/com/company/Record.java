@@ -4,6 +4,7 @@ public class Record {
     private static int counter = 0;
     private int id;
     private String firstName;
+    private String lastName;
     private String phone;
     private String email;
 
@@ -23,6 +24,15 @@ public class Record {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String firstName) {
+        this.lastName = firstName;
     }
 
     public String getPhone() {
