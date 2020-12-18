@@ -1,6 +1,6 @@
 package com.company;
 
-public class Record extends Record {
+public class Person extends Record {
     private String firstName;
     private String lastName;
     private String phone;

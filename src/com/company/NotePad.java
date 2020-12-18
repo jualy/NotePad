@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 
 public class NotePad {
-    private ArrayList<Person> records = new ArrayList<>();
+    private ArrayList<Record> records = new ArrayList<>();
 
     public void createRecord() {
         var rec = new Person();
