@@ -3,10 +3,10 @@ package com.company;
 import java.util.ArrayList;
 
 public class NotePad {
-    private ArrayList<Record> records = new ArrayList<>();
+    private ArrayList<Person> records = new ArrayList<>();
 
-    public void createPerson() {
-        var rec = new Record();
+    public void createRecord() {
+        var rec = new Person();
         rec.setFirstName(InputUtils.askString("First Name"));
         rec.setLastName(InputUtils.askString("Last Name"));
         rec.setPhone(InputUtils.askString("Phone"));
