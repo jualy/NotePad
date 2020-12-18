@@ -45,8 +45,7 @@ public class Main {
 
 
     private static void createRecord() {
-        notepad.createPerson();
-        var type = InputUtils.askString("Type");
+                var type = InputUtils.askString("Type");
         switch (type)  {
             case "person":
                 notepad.createPerson();
