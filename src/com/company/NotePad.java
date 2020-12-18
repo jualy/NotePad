@@ -10,7 +10,7 @@ public class NotePad {
         rec.setFirstName(InputUtils.askString("First Name"));
         rec.setLastName(InputUtils.askString("Last Name"));
         rec.setPhone(InputUtils.askString("Phone"));
-        rec.setPhone(InputUtils.askString("Email"));
+        rec.setEmail(InputUtils.askString("Email"));
         records.add(rec);
 
     }

@@ -9,8 +9,8 @@ public class Main {
             var cmd = InputUtils.askString("Enter command");
             switch (cmd) {
                 case "list":
-                listRecords();
-                break;
+                    listRecords();
+                    break;
                 case "create":
                     createRecord();
                     break;
@@ -64,6 +64,7 @@ public class Main {
         System.out.println("This is very helpful help");
     }
 }
+
 
 
 
