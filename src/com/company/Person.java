@@ -6,9 +6,6 @@ public class Person extends Record {
     private String phone;
     private String email;
 
-
-
-
     public String getFirstName() {
         return firstName;
     }

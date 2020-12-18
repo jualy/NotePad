@@ -14,9 +14,6 @@ public class Main {
                 case "create":
                     createRecord();
                     break;
-                case "find":
-                    showListRecords();
-                    break;
                 case "help":
                     showHelp();
                     break;
@@ -32,10 +29,6 @@ public class Main {
         System.out.println("Good bye!");
     }
 
-    private static void showListRecords() {
-        notepad.showListRecords();
-
-    }
 
     private static void listRecords() {
         notepad.listRecords();
@@ -52,6 +45,9 @@ public class Main {
                 break;
             case "book":
                 notepad.createBook();
+                break;
+            case "stickyNote":
+                notepad.createStickyNote();
                 break;
             default:
                 System.out.println("Unknown type");
