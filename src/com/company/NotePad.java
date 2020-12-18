@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class NotePad {
     private ArrayList<Record> records = new ArrayList<>();
 
-    public void createRecord() {
+    public void createPerson() {
         var rec = new Person();
         rec.setFirstName(InputUtils.askString("First Name"));
         rec.setLastName(InputUtils.askString("Last Name"));

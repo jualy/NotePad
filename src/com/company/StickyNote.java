@@ -11,4 +11,10 @@ public class StickyNote extends Record {
 
     private String text;
 
+
+    @Override
+    public String toString() {
+        var str = super.toString();
+        return String.format("%s; text: %s", text);
+    }
 }
