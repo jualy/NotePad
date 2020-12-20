@@ -22,9 +22,7 @@ public class NotePad {
         }
     }
 
-    public void showListRecords() {
 
-    }
 
     public void createBook() {
         var book = new Book();
@@ -36,7 +34,20 @@ public class NotePad {
     public void createStickyNote() {
         var stickyNote = new StickyNote();
         stickyNote.setText(InputUtils.askString("Text"));
-        records.add(rec);
+        records.add(stickyNote);
+
+    }
+
+    public void createRecurringAlarm() {
+        var recurringAlarm = new RecurringAlarm();
+        recurringAlarm.setTime(InputUtils.askString("Time"));
+        records.add(recurringAlarm);
+    }
+
+    public void createReminder() {
+        var reminder = new Reminder();
+        reminder.setTime(InputUtils.askString("Date"));
+        records.add(reminder);
 
     }
 }

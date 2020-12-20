@@ -46,8 +46,14 @@ public class Main {
             case "book":
                 notepad.createBook();
                 break;
-            case "stickyNote":
+            case "stickynote":
                 notepad.createStickyNote();
+                break;
+            case "recurringalarm":
+                notepad.createRecurringAlarm();
+                break;
+            case "reminder":
+                notepad.createReminder();
                 break;
             default:
                 System.out.println("Unknown type");
