@@ -12,7 +12,7 @@ public class RecurringAlarm extends StickyNote {
     }
     @Override
     public String toString() {
-        var str = super.toString();
-        return String.format("%s; time: %s", time);
+
+        return String.format("time: %s", time);
     }
 }

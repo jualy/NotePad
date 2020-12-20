@@ -13,8 +13,8 @@ public class Reminder extends RecurringAlarm {
 
     @Override
     public String toString() {
-        var str = super.toString();
-        return String.format("%s; date: %s", date);
+
+        return String.format("date: %s", date);
     }
 
 }
