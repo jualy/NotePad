@@ -30,6 +30,7 @@ public class Book extends Record {
     }
     @Override
     public String toString() {
-        return String.format("title: %s; author: %s isbn: %s", title, author, isbn);
+        var str = super.toString();
+        return String.format("%s; title: %s; author: %s isbn: %s", str, title, author, isbn);
     }
 }

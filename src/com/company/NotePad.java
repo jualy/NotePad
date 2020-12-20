@@ -7,12 +7,12 @@ public class NotePad {
     private Record rec;
 
     public void createPerson() {
-        var rec = new Person();
-        rec.setFirstName(InputUtils.askString("First Name"));
-        rec.setLastName(InputUtils.askString("Last Name"));
-        rec.setPhone(InputUtils.askString("Phone"));
-        rec.setEmail(InputUtils.askString("Email"));
-        records.add(rec);
+        var person = new Person();
+        person.setFirstName(InputUtils.askString("First Name"));
+        person.setLastName(InputUtils.askString("Last Name"));
+        person.setPhone(InputUtils.askString("Phone"));
+        person.setEmail(InputUtils.askString("Email"));
+        records.add(person);
 
     }
     public void listRecords() {
