@@ -45,4 +45,12 @@ var str = super.toString();
         return String.format("%s; first name: %s; last name: %s; phone: %s; email: %s;", str, firstName, lastName, phone, email);
     }
 
+    @Override
+    public void askData() {
+        firstName = (InputUtils.askString("First Name"));
+        lastName = (InputUtils.askString("Last Name"));
+        phone = (InputUtils.askString("Phone"));
+        email = (InputUtils.askString("Email"));
+    }
+
 }

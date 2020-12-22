@@ -33,4 +33,11 @@ public class Book extends Record {
         var str = super.toString();
         return String.format("%s; title: %s; author: %s isbn: %s", str, title, author, isbn);
     }
+
+    @Override
+    public void askData() {
+author = InputUtils.askString("Author");
+title = InputUtils.askString("Title");
+isbn = InputUtils.askString("Isbn");
+    }
 }

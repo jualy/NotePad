@@ -8,11 +8,10 @@ public class NotePad {
 
     public void createPerson() {
         var person = new Person();
-        person.setFirstName(InputUtils.askString("First Name"));
-        person.setLastName(InputUtils.askString("Last Name"));
-        person.setPhone(InputUtils.askString("Phone"));
-        person.setEmail(InputUtils.askString("Email"));
+        person.askData();
         records.add(person);
+        System.out.println(person);
+
 
     }
     public void listRecords() {
@@ -22,31 +21,28 @@ public class NotePad {
         }
     }
 
-
-
     public void createBook() {
         var book = new Book();
-        book.setAuthor(InputUtils.askString("Author"));
-        book.setTitle(InputUtils.askString("Title"));
-        book.setIsbn(InputUtils.askString("Isbn"));
+        book.askData();
         records.add(book);
+        System.out.println(book);
     }
     public void createStickyNote() {
         var stickyNote = new StickyNote();
-        stickyNote.setText(InputUtils.askString("Text"));
+        stickyNote.askData();
         records.add(stickyNote);
 
     }
 
     public void createRecurringAlarm() {
         var recurringAlarm = new RecurringAlarm();
-        recurringAlarm.setTime(InputUtils.askString("Time"));
+        recurringAlarm.askData();
         records.add(recurringAlarm);
     }
 
     public void createReminder() {
         var reminder = new Reminder();
-        reminder.setTime(InputUtils.askString("Date"));
+        reminder.askData();
         records.add(reminder);
 
     }
