@@ -8,12 +8,17 @@ public class NotePad {
 
     public void createPerson() {
         var person = new Person();
-        person.askData();
-        records.add(person);
-        System.out.println(person);
+        processRecord(person);
 
 
     }
+
+    private void processRecord(Record rec) {
+        rec.askData();
+        records.add(rec);
+        System.out.println("CREATED: " + rec);
+    }
+
     public void listRecords() {
         for (Record rec : records) {
             System.out.println(rec);
@@ -23,27 +28,21 @@ public class NotePad {
 
     public void createBook() {
         var book = new Book();
-        book.askData();
-        records.add(book);
-        System.out.println(book);
+        processRecord(book);
     }
     public void createStickyNote() {
         var stickyNote = new StickyNote();
-        stickyNote.askData();
-        records.add(stickyNote);
+        processRecord(stickyNote);
 
     }
 
     public void createRecurringAlarm() {
         var recurringAlarm = new RecurringAlarm();
-        recurringAlarm.askData();
-        records.add(recurringAlarm);
+        processRecord(recurringAlarm);
     }
 
     public void createReminder() {
         var reminder = new Reminder();
-        reminder.askData();
-        records.add(reminder);
-
+        processRecord(reminder);
     }
 }

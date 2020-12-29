@@ -1,32 +1,36 @@
 package com.company;
 
 public enum RecordType {
-    PERSON{
+    PERSON {
         @Override
         public Record createRecord() {
             return new Person();
-
+        }
     },
     BOOK {
         @Override
         public Record createRecord() {
-        return new Book();
+            return new Book();
+        }
     },
-    NOTE{
+    NOTE {
         @Override
         public Record createRecord() {
 
-        return new stickyNote();
+            return new StickyNote();
+        }
     },
-    ALARM{
+    ALARM {
         @Override
         public Record createRecord() {
-        return new recurringAlarm();
+            return new RecurringAlarm();
+        }
     },
     REMINDER {
         @Override
         public Record createRecord() {
-        return new Reminder();}
+            return new Reminder();
+        }
     };
 public abstract Record createRecord();
 
