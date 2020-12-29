@@ -38,29 +38,12 @@ public class Main {
 
 
     private static void createRecord() {
-                var type = InputUtils.askString("Type");
-        switch (type)  {
-            case "person":
-                notepad.createPerson();
-                break;
-            case "book":
-                notepad.createBook();
-                break;
-            case "stickynote":
-                notepad.createStickyNote();
-                break;
-            case "recurringalarm":
-                notepad.createRecurringAlarm();
-                break;
-            case "reminder":
-                notepad.createReminder();
-                break;
-            default:
-                System.out.println("Unknown type");
-
-        }
+        var strType = InputUtils.askString("Type");
+        var type = RecordType.valueOf(strType);
+        notepad.createRecord(type);
 
     }
+
     private static void showHelp() {
         System.out.println("This is very helpful help");
     }

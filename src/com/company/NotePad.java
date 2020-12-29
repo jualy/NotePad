@@ -6,14 +6,8 @@ public class NotePad {
     private ArrayList<Record> records = new ArrayList<>();
     private Record rec;
 
-    public void createPerson() {
-        var person = new Person();
-        processRecord(person);
-
-
-    }
-
-    private void processRecord(Record rec) {
+    public void createRecord(RecordType recType) {
+        var rec = recType.createRecord();
         rec.askData();
         records.add(rec);
         System.out.println("CREATED: " + rec);
@@ -25,24 +19,5 @@ public class NotePad {
 
         }
     }
-
-    public void createBook() {
-        var book = new Book();
-        processRecord(book);
-    }
-    public void createStickyNote() {
-        var stickyNote = new StickyNote();
-        processRecord(stickyNote);
-
-    }
-
-    public void createRecurringAlarm() {
-        var recurringAlarm = new RecurringAlarm();
-        processRecord(recurringAlarm);
-    }
-
-    public void createReminder() {
-        var reminder = new Reminder();
-        processRecord(reminder);
-    }
 }
+
