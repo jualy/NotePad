@@ -11,6 +11,7 @@ public class NotePad {
         rec.askData();
         records.add(rec);
         System.out.println("CREATED: " + rec);
+
     }
 
     public void listRecords() {

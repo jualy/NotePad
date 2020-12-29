@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.InputMismatchException;
+
 public class Main {
     private static NotePad notepad = new NotePad();
 
@@ -36,18 +38,22 @@ public class Main {
     }
 
 
-
     private static void createRecord() {
         var strType = InputUtils.askString("Type");
         var type = RecordType.valueOf(strType);
         notepad.createRecord(type);
 
+
+
+
+    }
+    private static void showHelp() {
+        System.out.println("You can create: Book, Person, Pet, Reminder, Alarm or StickyNote. Enter create.");
     }
 
-    private static void showHelp() {
-        System.out.println("This is very helpful help");
-    }
+
 }
+
 
 
 
