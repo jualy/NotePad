@@ -53,9 +53,12 @@ public class Main {
 private static void printMessage() {
         try {
             var strSpecies = Inpututils.askSpecies("Species");
-                    var type = RecordType.valueOf(strSpecies);
+                    var species = Species.valueOf(strSpecies);
             notepad.printMessage(species);
-        }
+
+    } catch (Exception e) {
+        System.out.println("Enter new command");
+    }
 
     }
     private static void showHelp() {

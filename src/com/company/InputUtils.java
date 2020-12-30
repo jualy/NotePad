@@ -11,7 +11,7 @@ public class InputUtils {
         return scanner.next();
     }
 
-    public static Species askSpecies(String species) {
+    public static Species askSpecies(String message) {
         System.out.print(message +": ");
         return scanner.next();
     }

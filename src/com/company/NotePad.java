@@ -21,5 +21,13 @@ public class NotePad {
 
         }
     }
+
+    public void printMessage(Species species) {
+        var rec = recSpecies.printMessage();
+        rec.askData();
+        records.add(rec);
+        System.out.println("CREATED: " + rec);
+
+    }
 }
 
