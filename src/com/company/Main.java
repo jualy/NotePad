@@ -52,8 +52,8 @@ public class Main {
     }
 private static void printMessage() {
         try {
-            var strSpecies = Inpututils.askSpecies("Species");
-                    var species = Species.valueOf(strSpecies);
+            var stringSpeaces = InputUtils.askSpecies("Species");
+             var species = Species.valueOf(stringSpeaces);
             notepad.printMessage(species);
 
     } catch (Exception e) {
