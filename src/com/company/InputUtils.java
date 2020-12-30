@@ -12,7 +12,7 @@ public class InputUtils {
     }
 
     public static Species askSpecies(String species) {
-        System.out.print(species +": ");
-        return species.next(); 
+        System.out.print(message +": ");
+        return scanner.next();
     }
 }

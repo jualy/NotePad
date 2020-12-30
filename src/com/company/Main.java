@@ -50,7 +50,14 @@ public class Main {
             System.out.println("Enter new command");
         }
     }
+private static void printMessage() {
+        try {
+            var strSpecies = Inpututils.askSpecies("Species");
+                    var type = RecordType.valueOf(strSpecies);
+            notepad.printMessage(species);
+        }
 
+    }
     private static void showHelp() {
         System.out.println("You can create: Book, Person, Pet, Reminder, Alarm or StickyNote. Enter create.");
     }
