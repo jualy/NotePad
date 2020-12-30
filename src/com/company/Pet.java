@@ -1,7 +1,12 @@
 package com.company;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Pet extends Record {
+
     private String name;
+
     private String species;
 
 
@@ -12,6 +17,7 @@ public class Pet extends Record {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public String getSpecies() {
         return species;
@@ -35,5 +41,9 @@ public class Pet extends Record {
             species = InputUtils.askString("Species");
 
         }
+    {
+        System.out.println("Enter species: CAT, DOG, FISH, OTHER and pet`s name");
+
+    }
 
     }

@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class NotePad {
     private ArrayList<Record> records = new ArrayList<>();
@@ -12,7 +13,7 @@ public class NotePad {
         records.add(rec);
         System.out.println("CREATED: " + rec);
 
-    }
+}
 
     public void listRecords() {
         for (Record rec : records) {

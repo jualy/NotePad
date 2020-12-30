@@ -39,14 +39,18 @@ public class Main {
 
 
     private static void createRecord() {
-        var strType = InputUtils.askString("Type");
-        var type = RecordType.valueOf(strType);
-        notepad.createRecord(type);
+
+        try {
+            var strType = InputUtils.askString("Type");
+            var type = RecordType.valueOf(strType);
+            notepad.createRecord(type);
 
 
-
-
+        } catch (Exception e) {
+            System.out.println("Enter new command");
+        }
     }
+
     private static void showHelp() {
         System.out.println("You can create: Book, Person, Pet, Reminder, Alarm or StickyNote. Enter create.");
     }
