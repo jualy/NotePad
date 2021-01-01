@@ -3,6 +3,7 @@ package com.company;
 
 public class Pet extends Record {
 
+
     public String getName() {
         return name;
     }
@@ -11,17 +12,17 @@ public class Pet extends Record {
         this.name = name;
     }
 
-    public Species getSpecies() {
+    public String getSpecies() {
         return species;
     }
 
-    public void setSpecies(Species species) {
+    public void setSpecies(String species) {
         this.species = species;
     }
 
     private String name;
 
-    private Species species;
+    private String species;
 
 
 
@@ -35,12 +36,9 @@ public class Pet extends Record {
         @Override
         public void askData() {
             name = InputUtils.askString("Name");
-            species = InputUtils.askSpecies("Species");
+            species = InputUtils.askString("Species");
 
         }
-    {
-        System.out.println("Enter species: CAT, DOG, FISH, OTHER and pet`s name");
 
-    }
 
     }
