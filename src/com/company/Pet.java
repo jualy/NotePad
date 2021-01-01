@@ -25,20 +25,18 @@ public class Pet extends Record {
     private String species;
 
 
+    @Override
+    public String toString() {
+        var str = super.toString();
+        return String.format("%s; name: %s; species: %s", str, name, species);
+    }
 
-
-        @Override
-        public String toString() {
-            var str = super.toString();
-            return String.format("%s; name: %s; species: %s", str, name, species);
-        }
-
-        @Override
-        public void askData() {
-            name = InputUtils.askString("Name");
-            species = InputUtils.askString("Species");
-
-        }
-
+    @Override
+    public void askData() {
+        name = InputUtils.askString("Name");
+        species = InputUtils.askSspecies("Species");
 
     }
+
+
+}

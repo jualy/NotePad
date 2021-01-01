@@ -39,9 +39,10 @@ public class Person extends Record {
         this.email = email;
 
     }
+
     @Override
-    public String toString()    {
-var str = super.toString();
+    public String toString() {
+        var str = super.toString();
         return String.format("%s; first name: %s; last name: %s; phone: %s; email: %s;", str, firstName, lastName, phone, email);
     }
 

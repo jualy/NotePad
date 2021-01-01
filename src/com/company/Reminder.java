@@ -16,6 +16,7 @@ public class Reminder extends RecurringAlarm {
         super.askData();
         date = InputUtils.askString("Date");
     }
+
     @Override
     public String toString() {
         var str = super.toString();

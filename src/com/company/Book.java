@@ -28,6 +28,7 @@ public class Book extends Record {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
     @Override
     public String toString() {
         var str = super.toString();
@@ -36,8 +37,8 @@ public class Book extends Record {
 
     @Override
     public void askData() {
-author = InputUtils.askString("Author");
-title = InputUtils.askString("Title");
-isbn = InputUtils.askString("Isbn");
+        author = InputUtils.askString("Author");
+        title = InputUtils.askString("Title");
+        isbn = InputUtils.askString("Isbn");
     }
 }

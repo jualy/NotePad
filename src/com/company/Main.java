@@ -1,11 +1,16 @@
 package com.company;
 
+import java.io.File;
+import java.io.FilenameFilter;
 import java.util.InputMismatchException;
 
 public class Main {
     private static NotePad notepad = new NotePad();
+    private static File notePadboardFile = new File("NotePad.txt");
+
 
     public static void main(String[] args) {
+        File notePadboardFile = Main.notePadboardFile;
         boolean running = true;
         while (running) {
             var cmd = InputUtils.askString("Enter command");
@@ -50,8 +55,6 @@ public class Main {
             System.out.println("Enter new command");
         }
     }
-
-
 
 
     private static void showHelp() {

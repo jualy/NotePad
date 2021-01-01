@@ -7,12 +7,14 @@ public class InputUtils {
 
 
     public static String askString(String message) {
-        System.out.print(message +": ");
+        System.out.print(message + ": ");
         return scanner.next();
     }
 
-    public static String askSpecies(String message) {
-        System.out.print(message +": ");
+
+    public static String askSspecies(String message) {
+        System.out.print(message + ": ");
         return scanner.next();
+
     }
 }
