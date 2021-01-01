@@ -12,9 +12,11 @@ public class InputUtils {
     }
 
 
-    public static String askSspecies(String message) {
+    static Species askSpecies(String message) {
         System.out.print(message + ": ");
-        return scanner.next();
+        String strSpecies = askString(message);
+        Species species = Species.valueOf(strSpecies);
+        return species;
 
     }
 }
