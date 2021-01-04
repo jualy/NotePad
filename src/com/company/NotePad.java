@@ -23,6 +23,29 @@ public class NotePad {
     }
 
 
+    public void delete(int id) {
+        var t = System.nanoTime();
+//        for (int i = 0; i < records.size(); i++) {
+//            var rec = records.get(i);
+//            if (rec.getId() == id) {
+//                records.remove(i);
+//                break;
+//            }
+//        }
+        records.removeIf(rec -> rec.getId() == id);
+        System.out.println(System.nanoTime() - t);
+    }
+
+    public void find(String substr) {
+        var tmp = substr.toLowerCase();
+        for (int i = 0; i < records.size(); i++) {
+            var rec = records.get(i);
+            if (rec.contains(tmp)) {
+                System.out.println(rec);
+            }
+        }
+
+    }
 }
 
 

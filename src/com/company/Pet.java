@@ -33,12 +33,19 @@ public class Pet extends Record {
     public void askData() {
         name = InputUtils.askString("Name");
 
-        for (Species sp: Species.values()) {
+        for (Species sp : Species.values()) {
             System.out.println(sp);
         }
         species = InputUtils.askSpecies("Species");
 
     }
 
+    @Override
+    public boolean contains(String substr) {
+        return super.contains(substr)
+                || name.toLowerCase().contains(substr)
+                || species.toLowerCase().contains(substr);
 
+
+    }
 }

@@ -54,4 +54,12 @@ public class Person extends Record {
         email = (InputUtils.askString("Email"));
     }
 
+    @Override
+    public boolean contains(String substr) {
+        return super.contains(substr)
+                || firstName.toLowerCase().contains(substr)
+                || lastName.toLowerCase().contains(substr)
+                || email.toLowerCase().contains(substr)
+                || phone.toLowerCase().contains(substr);
+    }
 }

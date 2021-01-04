@@ -23,4 +23,9 @@ public class Reminder extends RecurringAlarm {
         return String.format("%s; date: %s", str, date);
     }
 
+    @Override
+    public boolean contains(String substr) {
+        return super.contains(substr)
+                || date.toLowerCase().contains(substr);
+    }
 }

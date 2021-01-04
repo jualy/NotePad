@@ -21,6 +21,12 @@ public class Main {
                 case "create":
                     createRecord();
                     break;
+                case "delete":
+                    deleteRecord();
+                    break;
+                case "find":
+                    findRecord();
+                    break;
                 case "help":
                     showHelp();
                     break;
@@ -34,6 +40,16 @@ public class Main {
             }
         }
         System.out.println("Good bye!");
+    }
+
+    private static void findRecord() {
+        var substr = InputUtils.askString("Substring to find");
+        notepad.find(substr);
+    }
+
+    private static void deleteRecord() {
+        int id = InputUtils.askInt("ID");
+        notepad.delete(id);
     }
 
 

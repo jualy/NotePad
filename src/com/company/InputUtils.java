@@ -18,4 +18,9 @@ public class InputUtils {
         return species;
 
     }
+
+    public static int askInt(String message) {
+        System.out.println(message + ": ");
+        return scanner.nextInt();
+    }
 }

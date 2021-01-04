@@ -22,4 +22,10 @@ public class RecurringAlarm extends StickyNote {
         var str = super.toString();
         return String.format("%s; time: %s", str, time);
     }
+
+    @Override
+    public boolean contains(String substr) {
+        return super.contains(substr)
+                || time.toLowerCase().contains(substr);
+    }
 }
