@@ -36,9 +36,15 @@ public class Pet extends Record {
 
     }
 
-for (Species :Species.values())
+    Species sp1 = Species.CAT;
+    Species sp2 = Species.DOG;
+    Species sp3 = Species.FISH;
+    Species sp4 = Species.OTHER;
+
+for(
+    Species sp : Species.values())
 
     {
-        System.out.println();
+        System.out.println(sp);
     }
 }
