@@ -33,8 +33,8 @@ public class Pet extends Record {
     public void askData() {
         name = InputUtils.askString("Name");
 
-        for (Species: Species.values()) {
-            System.out.println();
+        for (Species sp: Species.values()) {
+            System.out.println(sp);
         }
         species = InputUtils.askSpecies("Species");
 
