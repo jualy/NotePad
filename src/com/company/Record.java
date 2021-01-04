@@ -23,7 +23,6 @@ public abstract class Record {
 
     public boolean contains(String substr) {
         var strId = String.valueOf(id);
-        var strSpecies = String.valueOf(species);
         return strId.contains(substr);
 
     }
