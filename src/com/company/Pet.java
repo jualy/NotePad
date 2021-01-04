@@ -36,5 +36,9 @@ public class Pet extends Record {
 
     }
 
+for (Species :Species.values())
 
+    {
+        System.out.println();
+    }
 }

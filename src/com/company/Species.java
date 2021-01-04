@@ -1,36 +1,36 @@
 package com.company;
 
+
 public enum Species {
     CAT {
         @Override
-        public void printMessage() {
-            System.out.println("it is cat");
+        public Record createSpecies() {
+            return new CAT();
 
         }
     },
 
     DOG {
         @Override
-        public void printMessage() {
-            System.out.println("it is dog");
+        public Record createSpecies() {
+            return new DOG();
         }
     },
 
     FISH {
         @Override
-        public void printMessage() {
-            System.out.println("it is fish");
+        public Record createSpecies() {
+            return new FISH();
         }
     },
 
     OTHER {
         @Override
-        public void printMessage() {
-            System.out.println("it is pet");
+        public Record createSpecies() {
+            return new OTHER();
         }
     };
 
 
-
-    public abstract void printMessage();
+    public abstract Record createSpecies();
 }

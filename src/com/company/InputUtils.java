@@ -13,7 +13,6 @@ public class InputUtils {
 
 
     static Species askSpecies(String message) {
-        System.out.print(message + ": ");
         String strSpecies = askString(message);
         Species species = Species.valueOf(strSpecies);
         return species;

@@ -17,7 +17,7 @@ public class enumDemo {
 
         }
         for (TrafficLight l : TrafficLight.values()) {
-System.out.println(l);
+            System.out.println(l);
         }
         System.out.println("---------");
         for (Gender l : Gender.values()) {
@@ -27,10 +27,10 @@ System.out.println(l);
         System.out.println("---------");
         var color = "GREEN";
         var tl3 = TrafficLight.valueOf(color);
-        switch(tl3) {
+        switch (tl3) {
             case RED:
-            System.out.println("steady!");
-            break;
+                System.out.println("steady!");
+                break;
             case YELLOW:
                 System.out.println("ready!");
                 break;
