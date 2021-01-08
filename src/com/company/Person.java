@@ -1,10 +1,23 @@
 package com.company;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Person extends Record {
     private String firstName;
     private String lastName;
     private String phone;
     private String email;
+    private String birthday;
+
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -38,12 +51,14 @@ public class Person extends Record {
     public void setEmail(String phone) {
         this.email = email;
 
+        var myBirthday = LocalDate.of(1978, Month.APRIL, 4);
+        System.out.println("my birthday 1: " + myBirthday);
     }
 
     @Override
     public String toString() {
         var str = super.toString();
-        return String.format("%s; first name: %s; last name: %s; phone: %s; email: %s;", str, firstName, lastName, phone, email);
+        return String.format("%s; first name: %s; last name: %s; phone: %s; email: %s; birthday: %s;", str, firstName, lastName, phone, email, birthday);
     }
 
     @Override
@@ -52,6 +67,7 @@ public class Person extends Record {
         lastName = (InputUtils.askString("Last Name"));
         phone = (InputUtils.askString("Phone"));
         email = (InputUtils.askString("Email"));
+        birthday = (InputUtils.askString("Birthday"));
     }
 
     @Override
@@ -60,6 +76,7 @@ public class Person extends Record {
                 || firstName.toLowerCase().contains(substr)
                 || lastName.toLowerCase().contains(substr)
                 || email.toLowerCase().contains(substr)
-                || phone.toLowerCase().contains(substr);
+                || phone.toLowerCase().contains(substr)
+                || birthday.toLowerCase().contains(substr);
     }
 }
