@@ -8,16 +8,16 @@ public class Person extends Record {
     private String lastName;
     private String phone;
     private String email;
-    private String birthday;
+    private LocalDate birthday;
 
-
-    public String getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -67,7 +67,7 @@ public class Person extends Record {
         lastName = (InputUtils.askString("Last Name"));
         phone = (InputUtils.askString("Phone"));
         email = (InputUtils.askString("Email"));
-        birthday = (InputUtils.askString("Birthday"));
+        birthday = (InputUtils.askBirthday("Birthday"));
     }
 
     @Override
@@ -77,6 +77,6 @@ public class Person extends Record {
                 || lastName.toLowerCase().contains(substr)
                 || email.toLowerCase().contains(substr)
                 || phone.toLowerCase().contains(substr)
-                || birthday.toLowerCase().contains(substr);
+                || InputUtils.birthdayToString(birthday).toLowerCase().contains(substr);
     }
 }

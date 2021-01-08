@@ -1,3 +1,5 @@
+
+
 import javax.swing.text.DateFormatter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -6,6 +8,8 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 
 public class DateTimeCreate {
+    private static LocalDateTime ZoneLocalDateTime;
+
     public static void main(String[] args) {
         var currentDate = LocalDate.now();
         System.out.println("current date: " + currentDate);
@@ -15,6 +19,9 @@ public class DateTimeCreate {
 
         var currentDateTime = LocalDateTime.now();
         System.out.println("current date/time:" + currentDateTime);
+
+        var currentZoneDateTime = ZoneLocalDateTime.now();
+        System.out.println("current zone/date/time:" + currentZoneDateTime);
 
 
         var myBirthday = LocalDate.of(1978, Month.APRIL, 4);
