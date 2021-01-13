@@ -46,6 +46,29 @@ public class NotePad {
         }
 
     }
-}
 
+    public void listDue() {
+        for (Record rec : records) {
+            if (rec instanceof Scheduled) {
+                Scheduled sc = (Scheduled) rec;
+                if (sc.isDue()) {
+                    System.out.println(sc);
+                }
+
+            }
+        }
+    }
+
+    public void dismiss(int id) {
+        for (Record rec : records) {
+            if (rec instanceof Scheduled) {
+                var sch = (Scheduled) rec;
+                if (rec.getId() == id) {
+                    sch.dismiss();
+                    break;
+                }
+            }
+        }
+    }
+}
 

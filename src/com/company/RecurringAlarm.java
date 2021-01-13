@@ -1,10 +1,12 @@
 package com.company;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class RecurringAlarm extends StickyNote {
+public class RecurringAlarm extends StickyNote implements Scheduled {
 
     private LocalTime time;
+    private LocalDate dismissDate;
 
     public LocalTime getTime() {
         return time;
@@ -14,6 +16,15 @@ public class RecurringAlarm extends StickyNote {
         this.time = time;
     }
 
+    @Override
+    public boolean isDue() {
+        return !LocalTime.now().equals(dismissDate) && LocalTime.now().isAfter(time);
+    }
+
+    @Override
+    public void dismiss() {
+        dismissDate = LocalDate.now();
+    }
 
     @Override
     public void askData() {

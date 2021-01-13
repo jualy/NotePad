@@ -1,9 +1,11 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 
-public class Person extends Record {
+public class Person extends Record implements Scheduled {
     private String firstName;
     private String lastName;
     private String phone;
@@ -51,8 +53,7 @@ public class Person extends Record {
     public void setEmail(String phone) {
         this.email = email;
 
-        var myBirthday = LocalDate.of(1978, Month.APRIL, 4);
-        System.out.println("my birthday 1: " + myBirthday);
+
     }
 
     @Override
@@ -78,5 +79,17 @@ public class Person extends Record {
                 || email.toLowerCase().contains(substr)
                 || phone.toLowerCase().contains(substr)
                 || InputUtils.birthdayToString(birthday).toLowerCase().contains(substr);
+    }
+
+    @Override
+    public boolean isDue() {
+        var birthday = InputUtils.birthdayToString(getBirthday());
+        boolean active;
+        return active && birthday.now().isAfter(birthday);
+    }
+
+    @Override
+    public void dismiss() {
+        active = false;
     }
 }

@@ -27,6 +27,12 @@ public class Main {
                 case "find":
                     findRecord();
                     break;
+                case "due":
+                    listDues();
+                    break;
+                case "dismiss":
+                    dismiss();
+                    break;
                 case "help":
                     showHelp();
                     break;
@@ -40,6 +46,15 @@ public class Main {
             }
         }
         System.out.println("Good bye!");
+    }
+
+    private static void dismiss() {
+        int id = InputUtils.askInt("ID");
+        notepad.dismiss(id);
+    }
+
+    private static void listDues() {
+        notepad.listDue();
     }
 
     private static void findRecord() {

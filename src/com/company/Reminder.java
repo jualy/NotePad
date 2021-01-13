@@ -1,10 +1,12 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class Reminder extends RecurringAlarm {
+public class Reminder extends RecurringAlarm implements Scheduled {
 
     private LocalDate date;
+    private boolean active = true;
 
     public LocalDate getDate() {
         return date;
@@ -14,6 +16,16 @@ public class Reminder extends RecurringAlarm {
         this.date = date;
     }
 
+    @Override
+    public boolean isDue() {
+        var tmp = LocalDateTime.of(getDate(), getTime());
+        return active && LocalDateTime.now().isAfter(tmp);
+    }
+
+    @Override
+    public void dismiss() {
+        active = false;
+    }
 
     @Override
     public void askData() {
