@@ -3,7 +3,7 @@ package com.company;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.Month;
+
 
 public class Person extends Record implements Scheduled {
     private String firstName;
@@ -83,13 +83,12 @@ public class Person extends Record implements Scheduled {
 
     @Override
     public boolean isDue() {
-        var birthday = InputUtils.birthdayToString(getBirthday());
-        boolean active;
-        return active && birthday.now().isAfter(birthday);
+        LocalDate dismissBirthday = null;
+        return !birthday.now().equals(dismissBirthday) && birthday.now().isAfter(birthday);
     }
 
     @Override
     public void dismiss() {
-        active = false;
+        boolean active = false;
     }
 }
