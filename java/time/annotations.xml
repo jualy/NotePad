@@ -1,0 +1,7 @@
+<root>
+    <item name='java.time.LocalDate java.time.ZonedDateTime atStartOfDay(java.time.ZoneId)'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val val="&quot;_-&gt;new&quot;"/>
+        </annotation>
+    </item>
+</root>

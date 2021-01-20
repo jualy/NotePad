@@ -11,6 +11,7 @@ public class Person extends Record implements Scheduled {
     private String phone;
     private String email;
     private LocalDate birthday;
+    private int dismissYear;
 
     public LocalDate getBirthday() {
         return birthday;
@@ -83,12 +84,13 @@ public class Person extends Record implements Scheduled {
 
     @Override
     public boolean isDue() {
-        LocalDate dismissBirthday = null;
-        return !birthday.now().equals(dismissBirthday) && birthday.now().isAfter(birthday);
+        boolean active = LocalDate.now().getYear() != dismissYear;
+        LocalDateTime notificationStart = birthday.withDayOfMonth(1).atStartOfDay();
+        return active && LocalDateTime.now().isAfter(notificationStart);
     }
 
     @Override
     public void dismiss() {
-        boolean active = false;
+        dismissYear = LocalDate.now().getYear();
     }
 }
